@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/background1.xml" value="0.2665" />
+        <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/background5.xml" value="0.2665" />
+        <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/background_dark.xml" value="0.2665" />
+        <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/black.xml" value="0.2665" />
         <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/gradient_list.xml" value="0.2665" />
+        <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/transition.xml" value="0.2665" />
+        <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/drawable/white.xml" value="0.2665" />
         <entry key="..\:/GitHub-Projects/Stop_Watch/app/src/main/res/layout/activity_main.xml" value="0.3489583333333333" />
       </map>
     </option>
