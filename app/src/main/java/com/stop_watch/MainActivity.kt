@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
 
         resetbtn.setOnClickListener {
             stopWatch.base=SystemClock.elapsedRealtime()
-
+            stopWatch.stop()
+            stopAt=0
         }
 
 
