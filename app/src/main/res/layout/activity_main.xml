@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="40dp"
     tools:context=".MainActivity"
     android:background="@color/cardview_dark_background">
 
     <Chronometer
         android:layout_width="wrap_content"
+        android:id="@+id/stopWatch"
         android:layout_height="wrap_content"
         android:text="Hello World!"
         android:textSize="40sp"
@@ -25,9 +27,10 @@
         android:text="Start"
         android:textColor="@color/black"
         android:textSize="18dp"
-        app:layout_constraintEnd_toStartOf="@+id/resetbtn"
-        app:layout_constraintStart_toEndOf="@+id/pausebtn"
-        tools:layout_editor_absoluteY="528dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopWatch" />
 
     <Button
         android:id="@+id/resetbtn"
@@ -37,8 +40,12 @@
         android:text="Reset"
         android:textColor="@color/black"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="528dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopWatch"
+        app:layout_constraintVertical_bias="0.505" />
 
     <Button
         android:id="@+id/pausebtn"
@@ -48,7 +55,11 @@
         android:text="Pause"
         android:textColor="@color/black"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="528dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopWatch"
+        app:layout_constraintVertical_bias="0.508" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
