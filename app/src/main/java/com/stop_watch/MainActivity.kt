@@ -17,21 +17,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val constraintLayout :ConstraintLayout= findViewById<ConstraintLayout>(R.id.mainLayout)
+        constraintLayout.setBackgroundResource(R.drawable.transition)
+        var transition  = constraintLayout.background as TransitionDrawable
+        transition.startTransition(500)
+
         val startbtn = findViewById<Button>(R.id.startbtn)
         val pausebtn = findViewById<Button>(R.id.pausebtn)
         val resetbtn = findViewById<Button>(R.id.resetbtn)
         val stopWatch = findViewById<Chronometer>(R.id.stopWatch)
         var stopAt:Long=0
-        val black :Drawable 
 
         startbtn.setOnClickListener {
-            //transition.startTransition(500)
-            val constraintLayout :ConstraintLayout= findViewById<ConstraintLayout>(R.id.mainLayout)
+            //transition.reverseTransition(500)
             constraintLayout.setBackgroundResource(R.drawable.gradient_list)
             var animation = constraintLayout.background as AnimationDrawable
             animation.setEnterFadeDuration(2500)
             animation.setExitFadeDuration(2500)
             animation.start()
+
+
 
             stopWatch.base= SystemClock.elapsedRealtime()-stopAt
             stopWatch.start()
@@ -39,18 +44,19 @@ class MainActivity : AppCompatActivity() {
 
 
         pausebtn.setOnClickListener {
-            val constraintLayout :ConstraintLayout= findViewById<ConstraintLayout>(R.id.mainLayout)
             constraintLayout.setBackgroundResource(R.drawable.gradient_list)
             var animation = constraintLayout.background as AnimationDrawable
             animation.stop()
+
+
+
             stopAt=SystemClock.elapsedRealtime()-stopWatch.base
             stopWatch.stop()
         }
 
         resetbtn.setOnClickListener {
-            val constraintLayout :ConstraintLayout= findViewById<ConstraintLayout>(R.id.mainLayout)
             constraintLayout.setBackgroundResource(R.drawable.transition)
-            var transition = constraintLayout.background as TransitionDrawable
+            var transition  = constraintLayout.background as TransitionDrawable
             transition.reverseTransition(500)
           //  animationDrawable.stop()
             stopWatch.base=SystemClock.elapsedRealtime()
