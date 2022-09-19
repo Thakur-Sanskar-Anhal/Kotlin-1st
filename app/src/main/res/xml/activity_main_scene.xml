@@ -9,21 +9,23 @@
         motion:duration="1000">
        <KeyFrameSet>
        </KeyFrameSet>
+        <OnClick motion:targetId="@id/mainLayout" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/stopWatch"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="281dp"
+            android:layout_height="113dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="0.48"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintHorizontal_bias="0.498"
-            motion:layout_constraintStart_toStartOf="parent" >
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_editor_absoluteY="296dp">
             <CustomAttribute motion:attributeName="textSize"
-                motion:customDimension="10sp"/>
+                motion:customDimension="15sp"/>
         </Constraint>
     </ConstraintSet>
 
@@ -32,7 +34,7 @@
             android:id="@+id/stopWatch"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="281dp"
-            android:layout_height="106dp"
+            android:layout_height="113dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintVertical_bias="0.48"
             motion:layout_constraintTop_toTopOf="parent"
@@ -43,8 +45,4 @@
                 motion:customDimension="30sp"/>
         </Constraint>
     </ConstraintSet>
-    <Transition
-        motion:constraintSetStart="@+id/end"
-        motion:constraintSetEnd="@+id/start"
-        motion:autoTransition="animateToStart" />
 </MotionScene>
